@@ -64,5 +64,17 @@ namespace MyCalculatorTests
             // Assert
             Assert.AreEqual(5, result);
         }
+
+        [TestMethod]
+        public void Divide_ThrowsExceptionIf0PassedAsParamenter()
+        {
+            // Arrange
+            var calculator = new Calculator();
+            double a = 10;
+            double b = 0;
+
+            // Assert
+            Assert.ThrowsException<ArgumentException>(() => calculator.Divide(a, b));
+        }
     }
 }

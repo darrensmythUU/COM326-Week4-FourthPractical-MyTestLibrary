@@ -19,6 +19,11 @@
 
         public double Divide(double a, double b)
         {
+            if (a == 0 || b == 0)
+            {
+                throw new ArgumentException("Neither parameter can be zero.");
+            }
+
             double result = 0;
             try
             {
